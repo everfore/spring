@@ -7,5 +7,5 @@ RUN ls
 #WORKDIR /usr/src/myapp
 #RUN javac Main.java
 RUN mvn install
-EXPOSE 8080
+EXPOSE 8080:80
 CMD ["java", "-jar", "target/gs-rest-service-0.1.0.jar"]
