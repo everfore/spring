@@ -14,4 +14,9 @@ public class GreetingController {
 	public Greeting greeting(@RequestParam(value="name",defaultValue="Spring 4.0") String name){
 		return new Greeting(counter.incrementAndGet(), String.format(formatter, name));
 	}
+	@RequestMapping("/")
+	public String root(){
+		System.out.println("root");
+		return "{This is rootPath.}"
+	}
 }
