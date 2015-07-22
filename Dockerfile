@@ -1,4 +1,7 @@
 FROM maven:3.3.3
+WORKDIR /path/app
+ADD . /path/app/
+RUN ls
 #FROM java:8
 #COPY . /usr/src/myapp
 #WORKDIR /usr/src/myapp
