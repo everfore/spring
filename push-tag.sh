@@ -1,6 +1,6 @@
 #!/bin/sh
 git status
-@echo "tag:"
+echo "tag:"
 read commits
 git tag -a "$commits" -m "$commits"
 git push origin --tag $commits:$commits
