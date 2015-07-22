@@ -17,6 +17,6 @@ public class GreetingController {
 	@RequestMapping("/")
 	public String root(){
 		System.out.println("root");
-		return "{This is rootPath.}"
+		return "{This is rootPath.}";
 	}
 }
