@@ -1,13 +1,20 @@
-package main.java.hello;
+package hello;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
 
-@SpringBootApplication
-public class Main {
+@Controller
+@EnableAutoConfiguration
+public class Main{
+	
+	@RequestMapping("/")
+	@ResponseBody
+	public String root(){
+		return "Hello, world.";
+	}
 	public static void main(String[] args) {
-		System.out.println("start");
 		SpringApplication.run(Main.class, args);
-		System.out.println("end");
 	}
 }
